@@ -1,0 +1,36 @@
+{
+    "name": "balticmaps-jira",
+    "version": "1.0.0",
+    "description": "Balticmaps.eu suggestion data extraction",
+    "main": "./src/app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "babel-node -- ./src/app.js && babel-watch ./src/app.js",
+        "build": "babel jira-map/urlParser.js -d dist",
+        "dev": "webpack --config webpack.config.js --mode development"
+    },
+    "author": "Bakhtiyar Garashov",
+    "license": "ISC",
+    "dependencies": {
+        "google-polyline": "^1.0.3",
+        "ol": "^6.3.1",
+        "proj4": "^2.6.2",
+        "urlParser": "^0.1.2",
+        "webpack": "^4.43.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.10.4",
+        "@babel/core": "^7.10.4",
+        "@babel/node": "^7.10.4",
+        "@babel/preset-env": "^7.10.4",
+        "babel-watch": "^7.0.0",
+        "fs": "0.0.1-security",
+        "nodemon": "^2.0.4",
+        "webpack-cli": "^3.3.12"
+    },
+    "nodemonConfig": {
+        "ignore": [
+            "*.json"
+        ]
+    }
+}
